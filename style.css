@@ -1,0 +1,153 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 40px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.interactivity-section {
+    margin-bottom: 50px;
+}
+
+.buttons-container,
+.slider-container,
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.morph-button,
+.rotate-button,
+.scale-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 0 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rotate-button:hover {
+    transform: rotate(180deg);
+}
+
+.scale-button:hover {
+    transform: scale(1.2);
+}
+
+.slider {
+    width: 80%;
+    margin: 0 10px;
+}
+
+img {
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.slider:focus+img {
+    transform: scale(1.2);
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-switch input:checked+.toggle-slider {
+    background-color: #2ecc71;
+}
+
+.pseudo-element-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+}
+
+.pseudo-element-box::before,
+.pseudo-element-box::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #e74c3c;
+}
+
+.pseudo-element-box::before {
+    top: -20px;
+    left: -20px;
+}
+
+.pseudo-element-box::after {
+    bottom: -20px;
+    right: -20px;
+}
+
+.rotating-cube {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    transform-style: preserve-3d;
+    animation: rotate 6s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #34495e;
+    color: white;
+}
